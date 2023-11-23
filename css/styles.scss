@@ -1,11 +1,103 @@
-.home-sofa-container {
-    margin-left: 100px;
-}
-
 .home-sofa-img {
     width: 100%;
 }
 
 #navbar {
-    background-color: #b6b5bc;
+    background-color: white;
 }
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+#home-text-container1{
+    margin-top: 10%;
+}
+
+.cta-home-btn {
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5%;
+    background-color: #a9a6ae;
+}
+
+.home-chair-img {
+    width: 100%;
+    margin-top: 10%;
+}
+
+#map-row {
+    margin: 5%;
+}
+
+@media (min-width: 320px) {
+    .home-text-h1 {
+        font-size: 15px;
+    }
+    
+    .home-text-p1 {
+        font-size: 10px;
+    }
+
+    #home-text-p2 {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 576px) {
+    .home-text-h1 {
+        font-size: 20px;
+    }
+    
+    .home-text-p1 {
+        font-size: 10px;
+    }
+    #home-text-p2 {
+        font-size: 15px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .home-text-h1 {
+        font-size: 30px;
+    }
+    
+    .home-text-p1 {
+        font-size: 15px;
+    }
+
+    #home-text-p2 {
+        font-size: 15px;
+    }
+
+  }
+
+  @media (min-width: 992px) {
+    .home-text-h1 {
+        font-size: 30px;
+    }
+    
+    .home-text-p1 {
+        font-size: 15px;
+    }
+    
+    #home-text-p2 {
+        font-size: 15px;
+    }
+
+  }
+  
+  @media (min-width: 1200px) {
+    .home-text-h1 {
+        font-size: 30px;
+    }
+    
+    .home-text-p1 {
+        font-size: 15px;
+    }
+    #home-text-p2 {
+        font-size: 15px;
+    }
+  }
+  
+  

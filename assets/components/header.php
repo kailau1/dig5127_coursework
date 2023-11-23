@@ -6,11 +6,10 @@
     <title>Header</title>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
+ 
 <nav class="navbar navbar-expand-lg" id="navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./images/logo.png" height="36px" alt="LIKEA logo" /></a>
+    <a class="navbar-brand" href="#"><img src="./assets/images/logo.png" height="36px" alt="LIKEA logo" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
