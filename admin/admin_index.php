@@ -9,5 +9,6 @@
 </head>
 <body>
     <?php include '../assets/components/admin_header.php';?>
+    <?php include '../assets/components/admin_index_body.php';?>
 </body>
 </html>

@@ -17,17 +17,15 @@ CREATE TABLE cs_product (
 
 CREATE TABLE cs_product_media (
     product_id INT,
-    seqnum INT,
     media_id INT,
-    PRIMARY KEY (product_id, seqnum, media_id)
+    PRIMARY KEY (product_id, media_id)
 );
 
 
 CREATE TABLE cs_category_prd (
 category_id INT,
-seqnum INT,
 product_id INT,
-PRIMARY KEY (category_id, seqnum, product_id)
+PRIMARY KEY (category_id, product_id)
 );
 
 CREATE TABLE cs_attribute (
@@ -39,15 +37,13 @@ value TEXT
 
 CREATE TABLE cs_prod_attribute (
 product_id INT,
-seqnum INT,
 attribute_id INT,
-PRIMARY KEY (product_id, seqnum, attribute_id)
+PRIMARY KEY (product_id, attribute_id)
 );
 
 CREATE TABLE media (
 id INT PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(50),
-type INT,
 path VARCHAR(255)
 );
 
@@ -75,3 +71,5 @@ ADD FOREIGN KEY (product_id) REFERENCES cs_product(id);
 
 ALTER TABLE cs_prod_attribute
 ADD FOREIGN KEY (attribute_id) REFERENCES cs_attribute(id);
+
+INSERT INTO admin_users (username, password) VALUES ('admin', 'admin');

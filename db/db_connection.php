@@ -4,9 +4,9 @@ $username = 'root';
 $password = '';
 $database = 'coursework_dig5127';
 
-$conn = new mysqli($hostname, $username, $password, $database);
+$con = new mysqli($hostname, $username, $password, $database);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 } else 
 ?>
