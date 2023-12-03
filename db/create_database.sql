@@ -21,7 +21,6 @@ CREATE TABLE cs_product_media (
     PRIMARY KEY (product_id, media_id)
 );
 
-
 CREATE TABLE cs_category_prd (
 category_id INT,
 product_id INT,

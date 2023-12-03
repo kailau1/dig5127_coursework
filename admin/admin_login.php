@@ -13,12 +13,12 @@
     <?php 
         include "../assets/components/admin_header.php";
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            include "authentication.php";
+            include "../functions/authentication.php";
         }
     ?>
 
     <div class="container">
-        <form action="authentication.php" method="POST">
+        <form action="/dig5127_coursework/functions/authentication.php" method="POST">
             <div class="row g-3 align-items-center" style="margin-top: 10px;">
                 <div class="col-auto">
                     <label class="form-label">Username</label>

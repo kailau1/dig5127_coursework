@@ -13,7 +13,7 @@
             <h1>Create Product</h1>
         </div>
         <?php
-            include './functions/post_product.php';
+            include '../functions/post_product.php';
         ?>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -50,7 +50,6 @@
                         }
                         ?>
                     </select>
-
                     </td>
                 </tr>
                 <tr>

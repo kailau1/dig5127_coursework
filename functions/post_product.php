@@ -19,23 +19,22 @@
 
                 $product_id = $con->insert_id;
                 
-                $query_getCatID = "SELECT id FROM cs_category WHERE name = ?";
+                $catID = htmlspecialchars(strip_tags($_POST['category_name']));
+                $query_getCatID = "SELECT id FROM cs_category WHERE id = $catID";
                 $stmt_getCatID = $con->prepare($query_getCatID);
-
-                $catName = htmlspecialchars(strip_tags($_POST['category_name']));
-                $stmt_getCatID->bind_param('s', $catName);
                 $stmt_getCatID->execute();
-
-                $result = $stmt_getCatID->get_result();
-
-                $row = $result->fetch_assoc();
-
-                $category_id = $row['id'];
-                
-                
-                $result->free();
+                $stmt_getCatID->bind_result($category_id);
+                $stmt_getCatID->fetch();
                 $stmt_getCatID->close();
-                
+
+
+
+                // Check if a valid category ID was obtained
+                if ($category_id === null) {
+                // Handle the case where the category is not found, perhaps show an error message
+                die('ERROR: Category not found.');
+                }
+
                 $query_category_prd = "INSERT INTO cs_category_prd (category_id, product_id) VALUES (?,?)";
                 $stmt_category_prd = $con->prepare($query_category_prd);
 

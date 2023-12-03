@@ -7,7 +7,7 @@
 </head>
 <body>
  
-<nav class="navbar navbar-expand-lg" id="navbar">
+<nav class="navbar navbar-expand-lg" id="navbar" style="margin-top: 1%;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="./assets/images/logo.png" height="36px" alt="LIKEA logo" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
