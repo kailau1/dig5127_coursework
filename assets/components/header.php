@@ -23,7 +23,7 @@
                 Products
             </a>
             <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Couches</a>
+                <a class="dropdown-item" href="./sofas.php">Couches</a>
                 <a class="dropdown-item" href="#">Desks</a>
                 <a class="dropdown-item" href="#">Chairs</a>
                 <a class="dropdown-item" href="#">Lamps</a>

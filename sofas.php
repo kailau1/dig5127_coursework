@@ -24,8 +24,10 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="row">
-
+                <?php include "./functions/fetch_sofa_cards.php"
+                ?>
+            </div>
+        </div>  
     </div>
 </body>
 </html>
