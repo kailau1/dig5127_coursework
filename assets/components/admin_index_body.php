@@ -7,6 +7,11 @@
     <title>Admin Index Body</title>
 </head>
 <body>
+<?php
+            session_start();
+
+            if (isset($_SESSION['username']) && !empty($_SESSION['username']) && basename($_SERVER['PHP_SELF']) == 'admin_index.php') {
+                ?>
     <div class="container-flex" style="margin-top: 5%;">
         <div class="row">
             <div class="col-12 text-center">
@@ -18,5 +23,8 @@
             </div>
         </div>
     </div>
+    <?php
+            }
+            ?>
 </body>
 </html>

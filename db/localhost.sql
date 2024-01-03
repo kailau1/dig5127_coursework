@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 13, 2023 at 03:45 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost
+-- Generation Time: Jan 03, 2024 at 11:35 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `coursework_dig5127`
+-- Database: `s22226104`
 --
+CREATE DATABASE IF NOT EXISTS `22226104` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `22226104`;
 
 -- --------------------------------------------------------
 
@@ -61,7 +63,9 @@ INSERT INTO `cs_attribute` (`id`, `name`, `description`, `value`) VALUES
 (1, 'Material', '', '100% Polyester'),
 (2, 'Dimensions', '', 'H: 77cm W: 179CM D93.5cm'),
 (3, 'Weight', '', '26kg'),
-(4, 'Colour', '', 'Black');
+(4, 'Colour', '', 'Black'),
+(5, 'asd', 'asd', 'asfd'),
+(6, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -101,7 +105,8 @@ CREATE TABLE `cs_category_prd` (
 --
 
 INSERT INTO `cs_category_prd` (`category_id`, `product_id`) VALUES
-(1, 1);
+(1, 1),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -121,7 +126,8 @@ CREATE TABLE `cs_product` (
 --
 
 INSERT INTO `cs_product` (`id`, `name`, `description`, `price`) VALUES
-(1, 'Comfy Fabric 2 Seater In Black', 'Spacious sofa. Soft sleep space. The Patsy sofa bed is the ideal solution when you have guests to stay. The sleek design, in a stylish charcoal fabric, is perfect for any modern home. Fold it out flat using the clic clac mechanism, and it transforms into a comfy single bed. With a striking stitching detail, Patsy is quite the looker.', 190);
+(1, 'Comfy Fabric 2 Seater In Black', 'Spacious sofa. Soft sleep space. The Patsy sofa bed is the ideal solution when you have guests to stay. The sleek design, in a stylish charcoal fabric, is perfect for any modern home. Fold it out flat using the clic clac mechanism, and it transforms into a comfy single bed. With a striking stitching detail, Patsy is quite the looker.', 190),
+(2, 'Comfy Fabric 2 Seater In Black', 'aksjdhfas', 100);
 
 -- --------------------------------------------------------
 
@@ -141,7 +147,8 @@ CREATE TABLE `cs_product_media` (
 INSERT INTO `cs_product_media` (`product_id`, `media_id`) VALUES
 (1, 1),
 (1, 2),
-(1, 3);
+(1, 3),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -162,7 +169,9 @@ INSERT INTO `cs_prod_attribute` (`product_id`, `attribute_id`) VALUES
 (1, 1),
 (1, 2),
 (1, 3),
-(1, 4);
+(1, 4),
+(2, 5),
+(2, 6);
 
 -- --------------------------------------------------------
 
@@ -183,7 +192,8 @@ CREATE TABLE `media` (
 INSERT INTO `media` (`id`, `name`, `path`) VALUES
 (1, '2_seater_black_1', './assets/images/products/2_seater_black_1.webp'),
 (2, '2_seater_black_2', './assets/images/products/2_seater_black_2.webp'),
-(3, '2_seater_black_3', './assets/images/products/2_seater_black_3.webp');
+(3, '2_seater_black_3', './assets/images/products/2_seater_black_3.webp'),
+(4, 'asd', 'asd');
 
 --
 -- Indexes for dumped tables
@@ -255,7 +265,7 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT for table `cs_attribute`
 --
 ALTER TABLE `cs_attribute`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cs_category`
@@ -267,13 +277,13 @@ ALTER TABLE `cs_category`
 -- AUTO_INCREMENT for table `cs_product`
 --
 ALTER TABLE `cs_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
