@@ -19,8 +19,11 @@
             <?php
             session_start();
 
-            if (isset($_SESSION['username']) && !empty($_SESSION['username']) && basename($_SERVER['PHP_SELF']) == 'admin_index.php') {
-                ?>
+            $current_page = basename($_SERVER['PHP_SELF']);
+            $allowed_pages = ['admin_index.php', 'create.php', 'read.php', 'update.php', 'delete.php'];
+            
+            if (isset($_SESSION['username']) && !empty($_SESSION['username']) && in_array($current_page, $allowed_pages)) {
+                            ?>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
