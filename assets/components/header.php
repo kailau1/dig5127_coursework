@@ -26,7 +26,7 @@
                 <a class="dropdown-item" href="./sofas.php">Couches</a>
                 <a class="dropdown-item" href="#">Desks</a>
                 <a class="dropdown-item" href="#">Chairs</a>
-                <a class="dropdown-item" href="#">Lamps</a>
+                <a class="dropdown-item" href="./lamps.php">Lamps</a>
             </div>
         </li>
         <li class="nav-item">

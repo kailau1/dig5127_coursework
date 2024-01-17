@@ -81,13 +81,14 @@ CREATE TABLE `cs_category` (
 
 --
 -- Dumping data for table `cs_category`
---
+-- 
 
 INSERT INTO `cs_category` (`id`, `name`, `description`) VALUES
 (1, 'Sofas', 'Indulge in the perfect blend of comfort and style with our curated collection of sofas. Whether you\'re looking to upgrade your living space or add a touch of luxury to your home, our diverse range of sofas offers something for every taste and lifestyle.'),
 (2, 'Tables', 'Discover the perfect balance of functionality and aesthetics with our exquisite collection of tables. From stylish coffee tables that anchor your living room to versatile dining tables that invite gatherings, our curated selection offers a variety of designs to complement every corner of your home.'),
 (3, 'Beds', 'Indulge in the luxury of restful nights and stylish interiors with our thoughtfully curated collection of beds. At LIKEA, we understand that your bedroom is your sanctuary, and our beds are designed to blend comfort, craftsmanship, and aesthetics seamlessly.'),
-(4, 'Wardrobes & Chests', 'Introducing our sophisticated collection of wardrobes and chests, where functionality meets fashion. At LIKEA, we understand the importance of storage solutions that not only keep your belongings in order but also enhance the aesthetics of your space. Explore our thoughtfully designed furniture pieces that redefine organization and style.');
+(4, 'Wardrobes & Chests', 'Introducing our sophisticated collection of wardrobes and chests, where functionality meets fashion. At LIKEA, we understand the importance of storage solutions that not only keep your belongings in order but also enhance the aesthetics of your space. Explore our thoughtfully designed furniture pieces that redefine organization and style.'),
+(5, 'Lamps', 'Lamps etc.'); 
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,13 @@ CREATE TABLE `cs_category_prd` (
 
 INSERT INTO `cs_category_prd` (`category_id`, `product_id`) VALUES
 (1, 1),
-(1, 2);
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(5, 6),
+(5, 7),
+(5, 8);
 
 -- --------------------------------------------------------
 
@@ -127,8 +134,13 @@ CREATE TABLE `cs_product` (
 
 INSERT INTO `cs_product` (`id`, `name`, `description`, `price`) VALUES
 (1, 'Comfy Fabric 2 Seater In Black', 'Spacious sofa. Soft sleep space. The Patsy sofa bed is the ideal solution when you have guests to stay. The sleek design, in a stylish charcoal fabric, is perfect for any modern home. Fold it out flat using the clic clac mechanism, and it transforms into a comfy single bed. With a striking stitching detail, Patsy is quite the looker.', 190),
-(2, 'Comfy Fabric 2 Seater In Black', 'aksjdhfas', 100);
-
+(2, 'Comfy Fabric 2 Seater In Grey', 'aksjdhfas', 100),
+(3, 'Comfy Fabric 2 Seater In Beige', 'aksjdhfas', 100),
+(4, 'Comfy Fabric 3 Seater In Pearl', 'aksjdhfas', 100),
+(5, 'Comfy Fabric Right hand chair In Charcoal', 'aksjdhfas', 100),
+(6, 'Dorma Lamp', 'TBA.', 190),
+(7, 'Aria Lamp', 'aksjdhfas', 190),
+(8, 'LED Lamp', 'aksjdhfas', 190);
 -- --------------------------------------------------------
 
 --
@@ -148,7 +160,31 @@ INSERT INTO `cs_product_media` (`product_id`, `media_id`) VALUES
 (1, 1),
 (1, 2),
 (1, 3),
-(2, 4);
+(2, 4),
+(2, 5),
+(2, 6),
+(2, 7),
+(3, 8),
+(3, 9),
+(3, 10),
+(4, 11),
+(4, 12),
+(4, 13),
+(5, 14),
+(5, 15),
+(5, 16),
+(5, 17),
+(5, 18),
+(6, 19),
+(6, 20),
+(6, 21),
+(7, 22),
+(7, 23),
+(7, 24),
+(8, 25),
+(8, 26),
+(8, 27);
+
 
 -- --------------------------------------------------------
 
@@ -193,7 +229,32 @@ INSERT INTO `media` (`id`, `name`, `path`) VALUES
 (1, '2_seater_black_1', './assets/images/products/2_seater_black_1.webp'),
 (2, '2_seater_black_2', './assets/images/products/2_seater_black_2.webp'),
 (3, '2_seater_black_3', './assets/images/products/2_seater_black_3.webp'),
-(4, 'asd', 'asd');
+(4, '3_seater_lightg_1', './assets/images/products/3_seater_lightg_1.webp'),
+(5, '3_seater_lightg_2', './assets/images/products/3_seater_lightg_2.webp'),
+(6, '3_seater_lightg_3', './assets/images/products/3_seater_lightg_3.webp'),
+(7, '3_seater_lightg_4', './assets/images/products/3_seater_lightg_4.webp'),
+(8, 'lisbon_beige_1', './assets/images/products/lisbon_beige_1.webp'),
+(9, 'lisbon_beige_2', './assets/images/products/lisbon_beige_2.webp'),
+(10, 'lisbon_beige_3', './assets/images/products/lisbon_beige_3.webp'),
+(11, 'pearl_3_seater_1', './assets/images/products/pearl_3_seater_1.webp'),
+(12, 'pearl_3_seater_2', './assets/images/products/pearl_3_seater_2.webp'),
+(13, 'pearl_3_seater_3', './assets/images/products/pearl_3_seater_3.webp'),
+(14, 'right_hand_charcoal_1', './assets/images/products/right_hand_charcoal_1.webp'),
+(15, 'right_hand_charcoal_2', './assets/images/products/right_hand_charcoal_2.webp'),
+(16, 'right_hand_charcoal_3', './assets/images/products/right_hand_charcoal_3.webp'),
+(17, 'right_hand_charcoal_4', './assets/images/products/right_hand_charcoal_4.webp'),
+(18, 'right_hand_charcoal_5', './assets/images/products/right_hand_charcoal_5.webp'),
+(19, 'aria_lamp_1', './assets/images/products/aria_lamp_1.webp'),
+(20, 'aria_lamp_2', './assets/images/products/aria_lamp_2.webp'),
+(21, 'aria_lamp_3', './assets/images/products/aria_lamp_3.webp'),
+(22, 'dorma_lamp_1', './assets/images/products/dorma_lamp_1.webp'),
+(23, 'dorma_lamp_2', './assets/images/products/dorma_lamp_2.webp'),
+(24, 'dorma_lamp_3', './assets/images/products/dorma_lamp_3.webp'),
+(25, 'led_lamp_1', './assets/images/products/led_lamp_1.webp'),
+(26, 'led_lamp_2', './assets/images/products/led_lamp_2.webp'),
+(27, 'led_lamp_3', './assets/images/products/led_lamp_3.webp');
+
+
 
 --
 -- Indexes for dumped tables
