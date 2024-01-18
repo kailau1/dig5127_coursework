@@ -88,7 +88,9 @@ INSERT INTO `cs_category` (`id`, `name`, `description`) VALUES
 (2, 'Tables', 'Discover the perfect balance of functionality and aesthetics with our exquisite collection of tables. From stylish coffee tables that anchor your living room to versatile dining tables that invite gatherings, our curated selection offers a variety of designs to complement every corner of your home.'),
 (3, 'Beds', 'Indulge in the luxury of restful nights and stylish interiors with our thoughtfully curated collection of beds. At LIKEA, we understand that your bedroom is your sanctuary, and our beds are designed to blend comfort, craftsmanship, and aesthetics seamlessly.'),
 (4, 'Wardrobes & Chests', 'Introducing our sophisticated collection of wardrobes and chests, where functionality meets fashion. At LIKEA, we understand the importance of storage solutions that not only keep your belongings in order but also enhance the aesthetics of your space. Explore our thoughtfully designed furniture pieces that redefine organization and style.'),
-(5, 'Lamps', 'Lamps etc.'); 
+(5, 'Lamps', 'Lamps etc.'), 
+(6, 'Desks', 'desks etc.'), 
+(7, 'Chairs', 'chairs etc.'); 
 
 -- --------------------------------------------------------
 
