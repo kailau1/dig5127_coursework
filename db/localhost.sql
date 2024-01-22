@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 03, 2024 at 11:35 PM
+-- Generation Time: Jan 23, 2024 at 12:53 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `s22226104`
+-- Database: `22226104`
 --
 CREATE DATABASE IF NOT EXISTS `22226104` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `22226104`;
@@ -40,7 +40,7 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`admin_id`, `username`, `password`) VALUES
-(1, 'admin', 'admin');
+(1, 'admin', '$2y$10$joCEnrkGvvKiK8qtgrjIfefnsehpHaXsTz/NfGDjH8YZT6CQGYBke');
 
 -- --------------------------------------------------------
 
@@ -81,16 +81,16 @@ CREATE TABLE `cs_category` (
 
 --
 -- Dumping data for table `cs_category`
--- 
+--
 
 INSERT INTO `cs_category` (`id`, `name`, `description`) VALUES
 (1, 'Sofas', 'Indulge in the perfect blend of comfort and style with our curated collection of sofas. Whether you\'re looking to upgrade your living space or add a touch of luxury to your home, our diverse range of sofas offers something for every taste and lifestyle.'),
 (2, 'Tables', 'Discover the perfect balance of functionality and aesthetics with our exquisite collection of tables. From stylish coffee tables that anchor your living room to versatile dining tables that invite gatherings, our curated selection offers a variety of designs to complement every corner of your home.'),
 (3, 'Beds', 'Indulge in the luxury of restful nights and stylish interiors with our thoughtfully curated collection of beds. At LIKEA, we understand that your bedroom is your sanctuary, and our beds are designed to blend comfort, craftsmanship, and aesthetics seamlessly.'),
 (4, 'Wardrobes & Chests', 'Introducing our sophisticated collection of wardrobes and chests, where functionality meets fashion. At LIKEA, we understand the importance of storage solutions that not only keep your belongings in order but also enhance the aesthetics of your space. Explore our thoughtfully designed furniture pieces that redefine organization and style.'),
-(5, 'Lamps', 'Illuminate your world with our enchanting lamp collection, where light meets artistry to create a captivating ambiance. Immerse yourself in a symphony of designs, from contemporary elegance to vintage charm, each lamp a statement piece that adds warmth and character to your space.'), 
-(6, 'Desks', 'Elevate your workspace with our stunning desk collection, where functionality meets design in perfect harmony. Immerse yourself in a realm of productivity and style as you explore our curated range of desks, meticulously crafted for the modern enthusiast. '), 
-(7, 'Chairs', 'Indulge in the ultimate blend of comfort and style with our exquisite collection of chairs. Crafted with precision and designed to elevate your space, each chair is a testament to sophistication. Dive into the luxury of relaxation as you explore a range that marries functionality with aesthetics.'); 
+(5, 'Lamps', 'Illuminate your world with our enchanting lamp collection, where light meets artistry to create a captivating ambiance. Immerse yourself in a symphony of designs, from contemporary elegance to vintage charm, each lamp a statement piece that adds warmth and character to your space.'),
+(6, 'Desks', 'Elevate your workspace with our stunning desk collection, where functionality meets design in perfect harmony. Immerse yourself in a realm of productivity and style as you explore our curated range of desks, meticulously crafted for the modern enthusiast. '),
+(7, 'Chairs', 'Indulge in the ultimate blend of comfort and style with our exquisite collection of chairs. Crafted with precision and designed to elevate your space, each chair is a testament to sophistication. Dive into the luxury of relaxation as you explore a range that marries functionality with aesthetics.');
 
 -- --------------------------------------------------------
 
@@ -115,13 +115,14 @@ INSERT INTO `cs_category_prd` (`category_id`, `product_id`) VALUES
 (1, 5),
 (5, 6),
 (5, 7),
-(5, 8);
+(5, 8),
 (6, 13),
 (6, 14),
 (6, 15),
 (7, 9),
 (7, 10),
 (7, 11);
+
 -- --------------------------------------------------------
 
 --
@@ -147,13 +148,14 @@ INSERT INTO `cs_product` (`id`, `name`, `description`, `price`) VALUES
 (5, 'Comfy Fabric Right hand chair In Charcoal', 'aksjdhfas', 100),
 (6, 'Dorma Lamp', 'TBA.', 190),
 (7, 'Aria Lamp', 'aksjdhfas', 190),
-(8, 'LED Lamp', 'aksjdhfas', 190);
+(8, 'LED Lamp', 'aksjdhfas', 190),
 (9, 'One Seater Chair - Black', 'A deep black one seater chair, comfortbale high quality material and wide range of colours. ', 190),
 (10, 'One Seater Chair - White', 'A pale white seater chair, comfortbale high quality material and wide range of colours. ', 190),
 (11, 'One Seater Chair - Orange', 'A vibrant orange seater chair, comfortbale high quality material and wide range of colours. ', 190),
 (13, 'Black Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 190),
 (14, 'White Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 190),
 (15, 'Wood Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 250);
+
 -- --------------------------------------------------------
 
 --
@@ -196,7 +198,7 @@ INSERT INTO `cs_product_media` (`product_id`, `media_id`) VALUES
 (7, 24),
 (8, 25),
 (8, 26),
-(8, 27);
+(8, 27),
 (9, 28),
 (10, 29),
 (11, 30),
@@ -270,14 +272,13 @@ INSERT INTO `media` (`id`, `name`, `path`) VALUES
 (24, 'dorma_lamp_3', './assets/images/products/dorma_lamp_3.webp'),
 (25, 'led_lamp_1', './assets/images/products/led_lamp_1.webp'),
 (26, 'led_lamp_2', './assets/images/products/led_lamp_2.webp'),
-(27, 'led_lamp_3', './assets/images/products/led_lamp_3.webp');
+(27, 'led_lamp_3', './assets/images/products/led_lamp_3.webp'),
 (28, 'black_1_seater', './assets/images/products/black_1_seater.webp'),
 (29, 'white_1_seater', './assets/images/products/white_1_seater.webp'),
 (30, 'orange_1_seater', './assets/images/products/orange_1_seater.webp'),
 (31, '1_wood_desk', './assets/images/products/1_Desk_Wood.webp'),
 (32, '1_white_desk', './assets/images/products/1_Desk_White.webp'),
 (33, '1_black_desk', './assets/images/products/1_Desk_Black.webp');
-
 
 --
 -- Indexes for dumped tables
@@ -355,19 +356,19 @@ ALTER TABLE `cs_attribute`
 -- AUTO_INCREMENT for table `cs_category`
 --
 ALTER TABLE `cs_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `cs_product`
 --
 ALTER TABLE `cs_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- Constraints for dumped tables
