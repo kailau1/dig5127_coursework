@@ -11,6 +11,13 @@
     <?php 
         include "../assets/components/admin_header.php";
         include "../db/db_connection.php";
+
+        session_start();
+
+        if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+            header('Location: admin_login.php');
+            exit;
+        }
     ?>
     <?php
         $sql = "SELECT p.id, p.name, p.description, p.price, GROUP_CONCAT(m.path SEPARATOR ', ') AS media_paths
@@ -22,7 +29,7 @@
         $result = $con->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<div class='table-responsive'><table class='table'>
+            echo "<div class='table-responsive'><table class='table table-bordered'>
                     <thead>
                         <tr>
                             <th>ID</th>

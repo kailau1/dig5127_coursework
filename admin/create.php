@@ -12,6 +12,13 @@
     <body>
         <?php 
             include '../assets/components/admin_header.php';
+
+            session_start(); 
+
+            if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+                header('Location: admin_login.php');
+                exit;
+            }
         ?>
         <div class="container">
             <div class="page-header">

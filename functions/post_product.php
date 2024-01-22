@@ -14,11 +14,10 @@
 
                 $stmt_product->bind_param('sss', $name, $description, $price);
                 
-
                 $stmt_product->execute();
 
                 $product_id = $con->insert_id;
-                
+        
                 $catID = htmlspecialchars(strip_tags($_POST['category_name']));
                 $query_getCatID = "SELECT id FROM cs_category WHERE id = $catID";
                 $stmt_getCatID = $con->prepare($query_getCatID);
@@ -26,14 +25,6 @@
                 $stmt_getCatID->bind_result($category_id);
                 $stmt_getCatID->fetch();
                 $stmt_getCatID->close();
-
-
-
-                // Check if a valid category ID was obtained
-                if ($category_id === null) {
-                // Handle the case where the category is not found, perhaps show an error message
-                die('ERROR: Category not found.');
-                }
 
                 $query_category_prd = "INSERT INTO cs_category_prd (category_id, product_id) VALUES (?,?)";
                 $stmt_category_prd = $con->prepare($query_category_prd);
@@ -91,14 +82,14 @@
 
                 }
 
-                $con->commit(); // Commit the transaction
+                $con->commit(); 
 
-                echo "<div class='alert alert-success'>Record was saved.</div>";
+                echo "<div class='alert alert-success'>Product was saved.</div>";
             }       catch (Exception $e) {
-                $con->rollback(); // Rollback the transaction
+                $con->rollback(); 
                 die('ERROR: ' . $e->getMessage());
             }finally {
-                $con->autocommit(true); // Reset autocommit to true
+                $con->autocommit(true); 
             }
         }
         ?>

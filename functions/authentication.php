@@ -1,30 +1,30 @@
 <?php
+session_start();
+
 include('../db/db_connection.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$username = stripcslashes($username);
-$password = stripcslashes($password);
 $username = mysqli_real_escape_string($con, $username);
-$password = mysqli_real_escape_string($con, $password);
 
-$sql = "SELECT * FROM admin_users WHERE username = '$username' AND password = '$password'";
-$result = mysqli_query($con, $sql);
-$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-$count = mysqli_num_rows($result);
+$stmt = $con->prepare("SELECT admin_id, username, password FROM admin_users WHERE username = ?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
 
-if ($count == 1) {
-    session_start();
+if ($row = $result->fetch_assoc()) {
+    if (password_verify($password, $row['password'])) {
+        session_regenerate_id();
 
-    $_SESSION['admin_id'] = $row['admin_id'];
-    $_SESSION['username'] = $row['username']; 
+        $_SESSION['loggedin'] = true; 
+        $_SESSION['username'] = $username;
+ 
 
-    echo "<h1><center> Login successful </center></h1>";
-
-    header("Location: /dig5127_coursework/admin/admin_index.php");
-    exit();
-} else {
-    echo "<h1> Login failed. Invalid username or password.</h1>";
+        header("Location: /dig5127_coursework/admin/admin_index.php");
+        exit();
+    }
 }
+
+echo "<h1> Login failed. Invalid username or password.</h1>";
 ?>
