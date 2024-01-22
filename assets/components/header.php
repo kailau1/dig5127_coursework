@@ -9,7 +9,11 @@
  
 <nav class="navbar navbar-expand-lg" id="navbar" style="margin-top: 1%;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./assets/images/logo.png" height="36px" alt="LIKEA logo" /></a>
+    <!-- Logo as a link to the home page -->
+    <a class="navbar-brand" href="./">
+        <img src="./assets/images/logo.png" height="36px" alt="LIKEA logo" />
+    </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,13 +28,13 @@
             </a>
             <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="./sofas.php">Couches</a>
-                <a class="dropdown-item" href="#">Desks</a>
-                <a class="dropdown-item" href="#">Chairs</a>
+                <a class="dropdown-item" href="./desks.php">Desks</a>
+                <a class="dropdown-item" href="./chairs.php">Chairs</a>
                 <a class="dropdown-item" href="./lamps.php">Lamps</a>
             </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="./About.php">About</a>
         </li>
         <li>
             <div class="input-group ps-5">
