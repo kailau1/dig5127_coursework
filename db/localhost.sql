@@ -88,9 +88,9 @@ INSERT INTO `cs_category` (`id`, `name`, `description`) VALUES
 (2, 'Tables', 'Discover the perfect balance of functionality and aesthetics with our exquisite collection of tables. From stylish coffee tables that anchor your living room to versatile dining tables that invite gatherings, our curated selection offers a variety of designs to complement every corner of your home.'),
 (3, 'Beds', 'Indulge in the luxury of restful nights and stylish interiors with our thoughtfully curated collection of beds. At LIKEA, we understand that your bedroom is your sanctuary, and our beds are designed to blend comfort, craftsmanship, and aesthetics seamlessly.'),
 (4, 'Wardrobes & Chests', 'Introducing our sophisticated collection of wardrobes and chests, where functionality meets fashion. At LIKEA, we understand the importance of storage solutions that not only keep your belongings in order but also enhance the aesthetics of your space. Explore our thoughtfully designed furniture pieces that redefine organization and style.'),
-(5, 'Lamps', 'Lamps etc.'), 
-(6, 'Desks', 'desks etc.'), 
-(7, 'Chairs', 'chairs etc.'); 
+(5, 'Lamps', 'Illuminate your world with our enchanting lamp collection, where light meets artistry to create a captivating ambiance. Immerse yourself in a symphony of designs, from contemporary elegance to vintage charm, each lamp a statement piece that adds warmth and character to your space.'), 
+(6, 'Desks', 'Elevate your workspace with our stunning desk collection, where functionality meets design in perfect harmony. Immerse yourself in a realm of productivity and style as you explore our curated range of desks, meticulously crafted for the modern enthusiast. '), 
+(7, 'Chairs', 'Indulge in the ultimate blend of comfort and style with our exquisite collection of chairs. Crafted with precision and designed to elevate your space, each chair is a testament to sophistication. Dive into the luxury of relaxation as you explore a range that marries functionality with aesthetics.'); 
 
 -- --------------------------------------------------------
 
@@ -116,7 +116,12 @@ INSERT INTO `cs_category_prd` (`category_id`, `product_id`) VALUES
 (5, 6),
 (5, 7),
 (5, 8);
-
+(6, 13),
+(6, 14),
+(6, 15),
+(7, 9),
+(7, 10),
+(7, 11);
 -- --------------------------------------------------------
 
 --
@@ -143,6 +148,12 @@ INSERT INTO `cs_product` (`id`, `name`, `description`, `price`) VALUES
 (6, 'Dorma Lamp', 'TBA.', 190),
 (7, 'Aria Lamp', 'aksjdhfas', 190),
 (8, 'LED Lamp', 'aksjdhfas', 190);
+(9, 'One Seater Chair - Black', 'A deep black one seater chair, comfortbale high quality material and wide range of colours. ', 190),
+(10, 'One Seater Chair - White', 'A pale white seater chair, comfortbale high quality material and wide range of colours. ', 190),
+(11, 'One Seater Chair - Orange', 'A vibrant orange seater chair, comfortbale high quality material and wide range of colours. ', 190),
+(13, 'Black Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 190),
+(14, 'White Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 190),
+(15, 'Wood Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 250);
 -- --------------------------------------------------------
 
 --
@@ -186,7 +197,12 @@ INSERT INTO `cs_product_media` (`product_id`, `media_id`) VALUES
 (8, 25),
 (8, 26),
 (8, 27);
-
+(9, 28),
+(10, 29),
+(11, 30),
+(13, 33),
+(14, 32),
+(15, 31);
 
 -- --------------------------------------------------------
 
@@ -255,7 +271,12 @@ INSERT INTO `media` (`id`, `name`, `path`) VALUES
 (25, 'led_lamp_1', './assets/images/products/led_lamp_1.webp'),
 (26, 'led_lamp_2', './assets/images/products/led_lamp_2.webp'),
 (27, 'led_lamp_3', './assets/images/products/led_lamp_3.webp');
-
+(28, 'black_1_seater', './assets/images/products/black_1_seater.webp'),
+(29, 'white_1_seater', './assets/images/products/white_1_seater.webp'),
+(30, 'orange_1_seater', './assets/images/products/orange_1_seater.webp'),
+(31, '1_wood_desk', './assets/images/products/1_Desk_Wood.webp'),
+(32, '1_white_desk', './assets/images/products/1_Desk_White.webp'),
+(33, '1_black_desk', './assets/images/products/1_Desk_Black.webp');
 
 
 --
