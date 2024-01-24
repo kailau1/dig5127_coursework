@@ -21,38 +21,28 @@ if (isset($_GET['product_id'])) {
         $stmt_product = $con->prepare($product_query);
         $stmt_product->bind_param("i", $product_id);
 
-        // Output the SQL query for debugging
-        echo "SQL Query: $product_query";
+        // Output the SQL query for debugging (optional)
+        
 
         $stmt_product->execute();
         $stmt_product->bind_result($id, $name, $description, $price, $mediaPath);
 
-        // Fetch product details
-        $stmt_product->fetch();
+        // Ensure data is fetched
+        if ($stmt_product->fetch()) {
+            // **Ensure $description is also accessible for HTML**
+            $description = htmlspecialchars($description); // Sanitize for security
 
+            // Display product details
+            echo "<div class='container-flex'>";
+            echo "<img src='$mediaPath' alt='$name'>"; // Assuming you have an image tag
+            echo "<p>$description</p>"; // Assuming you have a paragraph for description
+            // ... other HTML output ...
+            echo "</div>";
+        } else {
+            echo "Product details not found.";
+        }
 
         $con->commit();
-
-        // Display product details
-        echo "<div class='container-flex'>";
-        echo "<div class='row'>";
-        echo "<div class='col-md-12'>";
-        echo "<h1>Product Detail</h1>";
-        echo "</div>";
-        echo "</div>";
-        echo "<div class='row'>";
-        echo "<div class='col-md-12'>";
-        echo "<div class='card' style='width: 18rem;'>";
-        echo "<img src='$mediaPath' class='card-img-top' alt='Product Image'>";
-        echo "<div class='card-body'>";
-        echo "<h5 class='card-title'>$name</h5>";
-        echo "<p>$description</p>";
-        echo "<p>Price: £$price</p>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
 
     } catch (Exception $e) {
         $con->rollback();
