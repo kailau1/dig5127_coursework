@@ -19,7 +19,7 @@
                     <p class="home-text-p1">
                         3 Seater Sofa Bed by Angela Valdes,
                         <br />
-                        <button class="cta-home-btn" type="button" href="">Shop Here</button>
+                        <button class="cta-home-btn" type="button" href="sofas.php">Shop Here</button>
                     </p>
                 </figure>
                 <figure class="text-center">
@@ -27,7 +27,7 @@
                     <p class="home-text-p1">
                             Grey Dining Chair
                         <br />
-                        <button class="cta-home-btn" type="button" href="">Shop Here</button>
+                        <button class="cta-home-btn" type="button" href="chairs.php">Shop Here</button>
                     </p>
                 </figure>
             </div>
@@ -39,14 +39,13 @@
                     <blockquote class="blockquote" id="home-text-p2">
                         <p>At LIKEA, we invite you to immerse yourself in a collection that transcends the ordinary, offering a haven of comfort and style that resonates with your unique taste. </p>
 
-<p>With a deliberate blend of functionality and sophistication, LIKEA stands as your destination for transforming your home into a personalized sanctuary. Every piece in our selection is thoughtfully chosen to seamlessly integrate into your lifestyle, providing not just utility but an aesthetic that resonates with modern sensibilities.</p>
+                        <p>With a deliberate blend of functionality and sophistication, LIKEA stands as your destination for transforming your home into a personalized sanctuary. Every piece in our selection is thoughtfully chosen to seamlessly integrate into your lifestyle, providing not just utility but an aesthetic that resonates with modern sensibilities.</p>
 
-<p>From the practicality of daily living to the luxury of refined furnishings, LIKEA is your partner in creating the home you've always envisioned.</p>
+                        <p>From the practicality of daily living to the luxury of refined furnishings, LIKEA is your partner in creating the home you've always envisioned.</p>
 
-<p>Uncover the perfect harmony of form and function as you explore our offerings, each item carefully selected to cater to your desires for both comfort and elegance. Whether you're seeking the simplicity of everyday essentials or the allure of statement furnishings, LIKEA brings you a curated experience that goes beyond mere décor.</p>
+                        <p>Uncover the perfect harmony of form and function as you explore our offerings, each item carefully selected to cater to your desires for both comfort and elegance. Whether you're seeking the simplicity of everyday essentials or the allure of statement furnishings, LIKEA brings you a curated experience that goes beyond mere décor.</p>
 
-<p>Elevate your living space with LIKEA – where every piece contributes to the art of crafting your dream home.</p>
- </p> 
+                        <p>Elevate your living space with LIKEA - where every piece contributes to the art of crafting your dream home.</p>
                     </blockquote>
                     <figcaption class="blockquote-footer" id="home-text-p2">
                         Serena Williams

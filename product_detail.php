@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./css/styles.scss">
     <title>Product Detail</title>
 </head>
+
 <body>
     <?php
     include "./assets/components/header.php";
@@ -34,26 +36,26 @@
             $stmt_product->bind_result($id, $name, $description, $price, $mediaPath);
 
             if ($stmt_product->fetch()) {
-                $description = htmlspecialchars($description); 
+                $description = htmlspecialchars($description);
 
                 echo "<div class='container' style='padding-top: 1rem;'>";
                 echo "<h1>$name</h1>";
 
                 echo "<div class='row'>";
 
-                echo "<div class='col-md-6'>";
-                echo "<div id='productCarousel' class='carousel slide' data-bs-ride='carousel'>";
+                echo "<div class='col-md-6' >";
+                echo "<div id='productCarousel' class='carousel slide' data-bs-ride='carousel' style='padding-bottom: 2rem;'>";
                 echo "<div class='carousel-inner'>";
-                
+
                 $firstSlide = true;
                 do {
                     $activeClass = ($firstSlide) ? 'active' : '';
                     echo "<div class='carousel-item $activeClass' style='padding-top: 1rem;'>";
-                    echo "<img src='$mediaPath' class='d-block w-100' alt='$name'>";
+                    echo "<img src='$mediaPath' class='d-block w-100' alt='$name' >";
                     echo "</div>";
                     $firstSlide = false;
                 } while ($stmt_product->fetch());
-                
+
                 echo "</div>";
                 echo "<button class='carousel-control-prev' type='button' data-bs-target='#productCarousel' data-bs-slide='prev'>";
                 echo "<span class='carousel-control-prev-icon' aria-hidden='true'></span>";
@@ -75,20 +77,52 @@
                 JOIN cs_prod_attribute pa ON a.id = pa.attribute_id
                 WHERE pa.product_id = ?
                 ";
-            
+
                 $stmt_attributes = $con->prepare($product_attributes_query);
                 $stmt_attributes->bind_param("i", $product_id);
                 $stmt_attributes->execute();
                 $stmt_attributes->bind_result($attributeName, $attributeValue);
-            
+
                 echo "<h5>Attributes:</h3>";
                 echo "<ul>";
-            
+
                 while ($stmt_attributes->fetch()) {
                     echo "<li><strong>$attributeName:</strong> $attributeValue</li>";
                 }
-            
+
                 echo "</ul>";
+                $category_id_query = "
+                SELECT category_id
+                FROM cs_category_prd
+                WHERE product_id = ?
+                ";
+                $stmt_category_id = $con->prepare($category_id_query);
+                $stmt_category_id->bind_param("i", $product_id);
+                $stmt_category_id->execute();
+                $stmt_category_id->bind_result($category_id);
+                $stmt_category_id->fetch();
+                $stmt_category_id->close();
+
+                $category_page_url = '';
+                switch ($category_id) {
+                    case 1:
+                        $category_page_url = 'sofas.php'; 
+                        break;
+                    case 5:
+                        $category_page_url = 'lamps.php'; 
+                        break;
+                    case 6:
+                        $category_page_url = 'desks.php'; 
+                        break;
+                    case 7:
+                        $category_page_url = 'chairs.php'; 
+                        break;
+                    default:
+                        $category_page_url = 'index.php'; 
+                        break;
+                }
+
+                echo "<a href='{$category_page_url}' class='btn btn-primary'>Back to Products</a>";
                 echo "</div>";
 
                 echo "</div>";
@@ -99,7 +133,6 @@
             }
 
             $con->commit();
-
         } catch (Exception $e) {
             $con->rollback();
             echo "ERROR:" . $e->getMessage();
@@ -112,8 +145,9 @@
         exit();
     }
     ?>
-     <?php   include "./assets/components/footer.php"; ?>
+    <?php include "./assets/components/footer.php"; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 </html>
