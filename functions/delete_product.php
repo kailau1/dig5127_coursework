@@ -41,7 +41,7 @@ if (isset($_POST['product_id'])) {
             $con->commit();
             echo "Product deleted successfully.";
         } else {
-            throw new Exception("Could not delete product. It may have already been deleted or does not exist.");
+            throw new Exception("Could not delete product.");
         }
         $stmt->close();
     } catch (Exception $e) {
