@@ -15,28 +15,24 @@ if (isset($_POST['product_id'])) {
     $con->begin_transaction();
 
     try {
-        // Delete related entries in `cs_product_media`
         $delete_product_media_sql = "DELETE FROM cs_product_media WHERE product_id = ?";
         $stmt = $con->prepare($delete_product_media_sql);
         $stmt->bind_param("i", $product_id);
         $stmt->execute();
         $stmt->close();
 
-        // Delete related entries in `cs_prod_attribute`
         $delete_prod_attr_sql = "DELETE FROM cs_prod_attribute WHERE product_id = ?";
         $stmt = $con->prepare($delete_prod_attr_sql);
         $stmt->bind_param("i", $product_id);
         $stmt->execute();
         $stmt->close();
 
-        // Delete related entries in `cs_category_prd`
         $delete_cat_prd_sql = "DELETE FROM cs_category_prd WHERE product_id = ?";
         $stmt = $con->prepare($delete_cat_prd_sql);
         $stmt->bind_param("i", $product_id);
         $stmt->execute();
         $stmt->close();
 
-        // Delete the product from `cs_product`
         $delete_product_sql = "DELETE FROM cs_product WHERE id = ?";
         $stmt = $con->prepare($delete_product_sql);
         $stmt->bind_param("i", $product_id);

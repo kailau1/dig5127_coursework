@@ -1,30 +1,30 @@
 <?php
-    if ($_POST) {
-        include '../db/db_connection.php'; 
+if ($_POST) {
+    include '../db/db_connection.php';
 
-        try {
-            $con->autocommit(false);
+    try {
+        $con->autocommit(false);
 
-            $query = "INSERT INTO cs_category (name, description) VALUES (?, ?)";
-            $stmt = $con->prepare($query);
+        $query = "INSERT INTO cs_category (name, description) VALUES (?, ?)";
+        $stmt = $con->prepare($query);
 
-            $name = htmlspecialchars(strip_tags($_POST['category_name']));
-            $description = htmlspecialchars(strip_tags($_POST['category_description']));
+        $name = htmlspecialchars(strip_tags($_POST['category_name']));
+        $description = htmlspecialchars(strip_tags($_POST['category_description']));
 
-            $stmt->bind_param('ss', $name, $description);
+        $stmt->bind_param('ss', $name, $description);
 
-            $stmt->execute();
+        $stmt->execute();
 
-            $con->commit();
+        $con->commit();
 
-            echo "<div class='alert alert-success'>Category was saved.</div>";
+        echo "<div class='alert alert-success'>Category was saved.</div>";
 
-            $stmt->close();
-        } catch (Exception $e) {
-            $con->rollback();
-            die('ERROR: ' . $e->getMessage());
-        } finally {
-            $con->autocommit(true);
-        }
+        $stmt->close();
+    } catch (Exception $e) {
+        $con->rollback();
+        die('ERROR: ' . $e->getMessage());
+    } finally {
+        $con->autocommit(true);
     }
+}
 ?>
