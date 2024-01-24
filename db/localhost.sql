@@ -92,29 +92,29 @@ INSERT INTO `cs_attribute` (`id`, `name`, `description`, `value`) VALUES
 (30, 'Dimensions', '', 'H: 47cm W: 12cm D: 45.5cm'),
 (31, 'Weight', '', '2kg'),
 (32, 'Colour', '', 'matt black'),
-(33, 'Material', 'one seater', ''),
-(34, 'Dimensions', '', ''),
-(35, 'Weight', '', ''),
+(33, 'Material', '', 'leather'),
+(34, 'Dimensions', '', 'H: 95cm W: 100cm D: 85cm'),
+(35, 'Weight', '', '20kg'),
 (36, 'Colour', '', 'black'),
-(37, 'Material', 'one seater', ''),
-(38, 'Dimensions', '', ''),
-(39, 'Weight', '', ''),
+(37, 'Material', '', 'leather'),
+(38, 'Dimensions', '', 'H: 95cm W: 100cm D: 85cm'),
+(39, 'Weight', '', '20kg'),
 (40, 'Colour', '', 'white'),
-(41, 'Material', 'one seater', ''),
-(42, 'Dimensions', '', ''),
-(43, 'Weight', '', ''),
+(41, 'Material', '', 'leather'),
+(42, 'Dimensions', '', 'H: 95cm W: 100cm D: 85cm'),
+(43, 'Weight', '', '20kg'),
 (44, 'Colour', '', 'orange'),
-(45, 'Material', 'desk', ''),
-(46, 'Dimensions', '', ''),
-(47, 'Weight', '', ''),
+(45, 'Material', '', 'Particleboard, Steel, Fibreboard'),
+(46, 'Dimensions', '', 'H: 73cm W: 100cm D: 60cm '),
+(47, 'Weight', '', '6kg'),
 (48, 'Colour', '', 'black'),
-(49, 'Material', 'desk', ''),
-(50, 'Dimensions', '', ''),
-(51, 'Weight', '', ''),
+(49, 'Material', '', 'PEFC certified wood '),
+(50, 'Dimensions', '', 'H: 75.6cm W: 109.3cm D: 48.5'),
+(51, 'Weight', '', '30.4'),
 (52, 'Colour', '', 'White'),
 (53, 'Material', '', 'Wood'),
-(54, 'Dimensions', '', ''),
-(55, 'Weight', '', ''),
+(54, 'Dimensions', '', 'H: 75 cm W: 137 D: 150'),
+(55, 'Weight', '', '33kg'),
 (56, 'Colour', '', 'brown'),
 (57, 'Material', '', 'Wood, Metal, Fabric'),
 (58, 'Dimensions', '', 'H: 53cm W: 32cm D: 20cm'),
@@ -123,7 +123,7 @@ INSERT INTO `cs_attribute` (`id`, `name`, `description`, `value`) VALUES
 (61, 'Material', '', 'Ceramic'),
 (62, 'Dimensions', '', 'H: 48.5cm Diameter: 30cm'),
 (63, 'Weight', '', '4.5kg'),
-(64, 'Colour', '', 'Black');
+(64, 'Colour', '', 'Black'),
 
 
 -- --------------------------------------------------------
@@ -352,7 +352,7 @@ INSERT INTO `cs_prod_attribute` (`product_id`, `attribute_id`) VALUES
 (17, 61),
 (17, 62),
 (17, 63),
-(17, 64);
+(17, 64),
 
 
 -- --------------------------------------------------------
@@ -509,13 +509,10 @@ ALTER TABLE `media`
 --
 -- Constraints for table `cs_category_prd`
 --
-ALTER TABLE cs_category_prd
-ADD CONSTRAINT cs_category_prd_ibfk_1 FOREIGN KEY (category_id)
-REFERENCES cs_category (id)
-ON DELETE CASCADE,
-ADD CONSTRAINT cs_category_prd_ibfk_2 FOREIGN KEY (product_id)
-REFERENCES cs_product (id)
-ON DELETE CASCADE;
+ALTER TABLE `cs_category_prd`
+  ADD CONSTRAINT `cs_category_prd_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `cs_category` (`id`),
+  ADD CONSTRAINT `cs_category_prd_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `cs_product` (`id`);
+
 --
 -- Constraints for table `cs_product_media`
 --
