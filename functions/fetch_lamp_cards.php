@@ -34,14 +34,11 @@
             $con->commit(); 
     
             foreach ($products_array as $product) {
-                echo "<div class='col-sm-6 col-md-4 col-lg-3 mb-4'>";
-                echo "<div class='card' style='width: 100%;'>"; 
+                echo "<div class='card' style='width: 18rem;'>";
                 echo "<img src='". $product['mediaPath']. "' class='card-img-top' alt='Product Image'>";
                 echo "<div class='card-body'>";
                 echo "<h5 class='card-title'>". $product['name']. "</h5>";
-                echo "<p class='card-text'>£". $product['price']. "</p>";
-                echo "<a class='btn btn-primary' href=''>More details</a>";
-                echo "</div>";
+                echo "<p class='card-text'>£". $product['price']. " <a class='btn btn-primary' href='product_detail.php?product_id={$product['id']}'>More details</a> </p>";
                 echo "</div>";
                 echo "</div>";
             }
