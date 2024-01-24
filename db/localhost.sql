@@ -509,10 +509,13 @@ ALTER TABLE `media`
 --
 -- Constraints for table `cs_category_prd`
 --
-ALTER TABLE `cs_category_prd`
-  ADD CONSTRAINT `cs_category_prd_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `cs_category` (`id`),
-  ADD CONSTRAINT `cs_category_prd_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `cs_product` (`id`);
-
+ALTER TABLE cs_category_prd
+ADD CONSTRAINT cs_category_prd_ibfk_1 FOREIGN KEY (category_id)
+REFERENCES cs_category (id)
+ON DELETE CASCADE,
+ADD CONSTRAINT cs_category_prd_ibfk_2 FOREIGN KEY (product_id)
+REFERENCES cs_product (id)
+ON DELETE CASCADE;
 --
 -- Constraints for table `cs_product_media`
 --
