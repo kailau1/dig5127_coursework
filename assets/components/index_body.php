@@ -37,10 +37,16 @@
             <div class="col-8">
                 <figure>
                     <blockquote class="blockquote" id="home-text-p2">
-                        <p>Discover the essence of LIKEA — where practicality meets luxury. From everyday essentials to
-                            elegant furnishings, LIKEA offers a curated selection to transform your living space into a
-                            haven of comfort and style. With a blend of functionality and sophistication, find
-                            everything you need to create the home you've always envisioned. </p>
+                        <p>At LIKEA, we invite you to immerse yourself in a collection that transcends the ordinary, offering a haven of comfort and style that resonates with your unique taste. </p>
+
+<p>With a deliberate blend of functionality and sophistication, LIKEA stands as your destination for transforming your home into a personalized sanctuary. Every piece in our selection is thoughtfully chosen to seamlessly integrate into your lifestyle, providing not just utility but an aesthetic that resonates with modern sensibilities.</p>
+
+<p>From the practicality of daily living to the luxury of refined furnishings, LIKEA is your partner in creating the home you've always envisioned.</p>
+
+<p>Uncover the perfect harmony of form and function as you explore our offerings, each item carefully selected to cater to your desires for both comfort and elegance. Whether you're seeking the simplicity of everyday essentials or the allure of statement furnishings, LIKEA brings you a curated experience that goes beyond mere décor.</p>
+
+<p>Elevate your living space with LIKEA – where every piece contributes to the art of crafting your dream home.</p>
+ </p> 
                     </blockquote>
                     <figcaption class="blockquote-footer" id="home-text-p2">
                         Serena Williams
