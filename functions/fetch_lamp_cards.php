@@ -34,7 +34,7 @@
             $con->commit(); 
     
             foreach ($products_array as $product) {
-                echo "<div class='card' style='width: 18rem;'>";
+                echo "<div class='card' style='width: 18rem; margin: 1rem;'>";
                 echo "<img src='". $product['mediaPath']. "' class='card-img-top' alt='Product Image'>";
                 echo "<div class='card-body'>";
                 echo "<h5 class='card-title'>". $product['name']. "</h5>";

@@ -24,13 +24,13 @@
         include "./assets/components/header.php";
         include "./db/db_connection.php";
     ?>
-    <div class="container-flex">
+    <div class="container-flex" style="padding: 1rem;">
         <div class="row">
             <div class="col-md-12">
                 <h1>Products</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="padding: 1rem;">
 
             <?php include "./functions/fetch_sofa_cards.php"
                 ?>

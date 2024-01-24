@@ -70,23 +70,24 @@
                 echo "<p>$description</p>";
 
                 $product_attributes_query = "
-                    SELECT name, value
-                    FROM cs_prod_attribute
-                    WHERE product_id = ?
+                SELECT a.name, a.value
+                FROM cs_attribute a
+                JOIN cs_prod_attribute pa ON a.id = pa.attribute_id
+                WHERE pa.product_id = ?
                 ";
-
+            
                 $stmt_attributes = $con->prepare($product_attributes_query);
                 $stmt_attributes->bind_param("i", $product_id);
                 $stmt_attributes->execute();
                 $stmt_attributes->bind_result($attributeName, $attributeValue);
-
-                echo "<h3>Attributes:</h3>";
+            
+                echo "<h5>Attributes:</h3>";
                 echo "<ul>";
-
+            
                 while ($stmt_attributes->fetch()) {
                     echo "<li><strong>$attributeName:</strong> $attributeValue</li>";
                 }
-
+            
                 echo "</ul>";
                 echo "</div>";
 

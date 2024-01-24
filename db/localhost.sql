@@ -123,7 +123,7 @@ INSERT INTO `cs_attribute` (`id`, `name`, `description`, `value`) VALUES
 (61, 'Material', '', 'Ceramic'),
 (62, 'Dimensions', '', 'H: 48.5cm Diameter: 30cm'),
 (63, 'Weight', '', '4.5kg'),
-(64, 'Colour', '', 'Black'),
+(64, 'Colour', '', 'Black');
 
 
 -- --------------------------------------------------------
@@ -352,7 +352,7 @@ INSERT INTO `cs_prod_attribute` (`product_id`, `attribute_id`) VALUES
 (17, 61),
 (17, 62),
 (17, 63),
-(17, 64),
+(17, 64);
 
 
 -- --------------------------------------------------------

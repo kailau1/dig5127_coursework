@@ -17,7 +17,7 @@
         include "./assets/components/header.php";
         include "./db/db_connection.php";
     ?>
-    <div class="container-flex">
+    <div class="container-flex" style="padding: 1rem;">
         <div class="row">
             <div class="col-md-12">
                 <h1>Desks</h1>
