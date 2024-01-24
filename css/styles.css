@@ -55,6 +55,12 @@ body {
   margin: 5%;
 }
 
+@media (max-width: 600px) {
+  .footer p {
+      font-size: 14px; 
+  }
+}
+
 @media (min-width: 320px) {
   .home-text-h1 {
     font-size: 15px;
