@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <img src="./assets/images/home_sofa.webp" class="home-sofa-img" alt="Comfy home sofa" />
+                <img src="./assets/images/home_sofa.png" class="home-sofa-img" alt="Comfy home sofa" />
             </div>
             <div class="col-4" id="home-text-container1">
                 <figure class="text-center">
@@ -54,7 +54,7 @@
         <div class="row" id="map-row">
             <div class="col-4">
                 <div class="card" style="width: 80%;">
-                    <img src="./assets/images/birmingham-card.jpeg" class="card-img-top" alt="...">
+                    <img src="./assets/images/birmingham-card.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Birmingham</h5>
                         <p class="card-text">Visit our store!</p>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-4">
                 <div class="card" style="width: 80%;">
-                    <img src="./assets/images/wembly-card.jpeg" class="card-img-top" alt="...">
+                    <img src="./assets/images/wembly-card.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">London</h5>
                         <p class="card-text">Visit our store!</p>
@@ -74,7 +74,7 @@
             </div>
             <div class="col-4">
                 <div class="card" style="width: 80%;">
-                    <img src="./assets/images/manny-card.jpeg" class="card-img-top" alt="...">
+                    <img src="./assets/images/manny-card.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Manchester</h5>
                         <p class="card-text">Visit our store!</p>
