@@ -31,12 +31,15 @@ body {
 }
 
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #a3a3a3;
+  color: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 20px;
+  height: 40px;
 }
 
 .footer p {
@@ -45,8 +48,8 @@ body {
 }
 
 .footer a {
-  color: #fff;
-  text-decoration: none;
+  color: #4175d6;
+  text-decoration: underline;
 }
 
 @media (min-width: 320px) {
