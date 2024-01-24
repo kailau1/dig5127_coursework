@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 
 include('../db/db_connection.php');
@@ -21,7 +23,7 @@ if ($row = $result->fetch_assoc()) {
         $_SESSION['username'] = $username;
  
 
-        header("Location: /dig5127_coursework/admin/admin_index.php");
+        header("Location: ../admin/admin_index.php");
         exit();
     }
 }

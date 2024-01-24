@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    
-    <div class="footer">
-        <p>Kai Lou, Malachi Clarke, Daniel Bashford</p>
-        <p><a href="./admin/admin_login.php">Admin Login</a></p>
+    <div class="footer" >
+        <p style="padding-top: 0.5rem;">Kai Lau, Malachi Clarke, Daniel Bashford</p>
+        <p style="padding-top: 0.5rem;"><a href="./admin/admin_login.php" style="text-decoration:none; color:black;">Admin Login</a></p>
     </div>
 </body>
 </html>

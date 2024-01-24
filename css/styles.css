@@ -1,5 +1,30 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #a3a3a3;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 10px;
+  height: 40px;
+}
+
 .home-sofa-img {
   width: 100%;
+}
+
+#admin-index-btn {
+  padding: 5px;
 }
 
 #navbar {
@@ -28,28 +53,6 @@ body {
 
 #map-row {
   margin: 5%;
-}
-
-.footer {
-  background-color: #a3a3a3;
-  color: #000000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  margin-top: 20px;
-  height: 40px;
-}
-
-.footer p {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.footer a {
-  color: #4175d6;
-  text-decoration: underline;
 }
 
 @media (min-width: 320px) {
@@ -106,4 +109,6 @@ body {
   #home-text-p2 {
     font-size: 15px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
