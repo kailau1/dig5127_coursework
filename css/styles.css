@@ -30,6 +30,25 @@ body {
   margin: 5%;
 }
 
+.footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (min-width: 320px) {
   .home-text-h1 {
     font-size: 15px;
