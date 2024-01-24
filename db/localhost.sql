@@ -116,6 +116,8 @@ INSERT INTO `cs_category_prd` (`category_id`, `product_id`) VALUES
 (5, 6),
 (5, 7),
 (5, 8),
+(5, 16),
+(5, 17),
 (6, 13),
 (6, 14),
 (6, 15),
@@ -144,17 +146,19 @@ INSERT INTO `cs_product` (`id`, `name`, `description`, `price`) VALUES
 (1, 'Comfy Fabric 2 Seater In Black', 'Spacious sofa. Soft sleep space. The Patsy sofa bed is the ideal solution when you have guests to stay. The sleek design, in a stylish charcoal fabric, is perfect for any modern home. Fold it out flat using the clic clac mechanism, and it transforms into a comfy single bed. With a striking stitching detail, Patsy is quite the looker.', 190),
 (2, 'Comfy Fabric 2 Seater In Grey', 'aksjdhfas', 100),
 (3, 'Comfy Fabric 2 Seater In Beige', 'aksjdhfas', 100),
-(4, 'Comfy Fabric 3 Seater In Pearl', 'aksjdhfas', 100),
+(4, 'Comfy Fabric 3 Seater In Pearl', 'Graceful, chic, goes-with-everything - the timeless, this is a contemporary classic sofa to love for years to come. Its seat cushions offer supportive comfort with low maintenance, making it as practical as it is stylish.', 100),
 (5, 'Comfy Fabric Right hand chair In Charcoal', 'aksjdhfas', 100),
-(6, 'Dorma Lamp', 'TBA.', 190),
-(7, 'Aria Lamp', 'aksjdhfas', 190),
-(8, 'LED Lamp', 'aksjdhfas', 190),
+(6, 'Dorma Lamp', 'This stunning Dorma table lamp is the perfect product to add a timeless piece to any room of the house, with its modern colourway that complements an array of home decors.', 100),
+(7, 'Aria Lamp', 'Add opulence and sparkle to your room with the Aria table lamp. Featuring hand finished multi-faceted crystals this lamp is sure to impress', 70),
+(8, 'LED Lamp', 'The LED table lamp is a practical companion on a writing and working table. It has clearly defined shapes and a striking angular design that is easy to see.', 80),
 (9, 'One Seater Chair - Black', 'A deep black one seater chair, comfortbale high quality material and wide range of colours. ', 190),
 (10, 'One Seater Chair - White', 'A pale white seater chair, comfortbale high quality material and wide range of colours. ', 190),
 (11, 'One Seater Chair - Orange', 'A vibrant orange seater chair, comfortbale high quality material and wide range of colours. ', 190),
 (13, 'Black Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 190),
 (14, 'White Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 190),
-(15, 'Wood Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 250);
+(15, 'Wood Desk', 'A elegant quality office desk, comfortbale high quality material and wide range of colours. ', 250),
+(16, 'Fabric Table lamp', ' This lamp impresses not only with its appearance but also with its technical features. In addition to the E27 socket in the white fabric lampshade, there is another light source integrated into the table lamp. It sits vertically in the wooden frame and looks like a decorative light strip when turned on. ', 100),
+(17, 'Fairford Lamp', 'A delightful bedside lamp featuring a grey washed scratch-effect ceramic base with fabric shade. Scratch effect base with fabric shade.', 50);
 
 -- --------------------------------------------------------
 
@@ -204,7 +208,13 @@ INSERT INTO `cs_product_media` (`product_id`, `media_id`) VALUES
 (11, 30),
 (13, 33),
 (14, 32),
-(15, 31);
+(15, 31),
+(16, 34),
+(16, 35),
+(16, 36),
+(17, 37),
+(17, 38),
+(17, 39),
 
 -- --------------------------------------------------------
 
@@ -278,7 +288,13 @@ INSERT INTO `media` (`id`, `name`, `path`) VALUES
 (30, 'orange_1_seater', './assets/images/products/orange_1_seater.webp'),
 (31, '1_wood_desk', './assets/images/products/1_Desk_Wood.webp'),
 (32, '1_white_desk', './assets/images/products/1_Desk_White.webp'),
-(33, '1_black_desk', './assets/images/products/1_Desk_Black.webp');
+(33, '1_black_desk', './assets/images/products/1_Desk_Black.webp'),
+(34, 'fabric_table_lamp_1', './assets/images/products/fabric_table_lamp_1.webp'),
+(35, 'fabric_table_lamp_2', './assets/images/products/fabric_table_lamp_2.webp'),
+(36, 'fabric_table_lamp_3', './assets/images/products/fabric_table_lamp_3.webp'),
+(37, 'fairford_lamp_1', './assets/images/products/fairford_lamp_1.webp'),
+(38, 'fairford_lamp_2', './assets/images/products/fairford_lamp_2.webp'),
+(39, 'fairford_lamp_3', './assets/images/products/fairford_lamp_3.webp');
 
 --
 -- Indexes for dumped tables
