@@ -32,6 +32,7 @@
                 <?php include "./functions/fetch_chair_cards.php"; ?>
         </div>
     </div>
+    <?php include "./assets/components/footer.php"; ?>
 </body>
 
 </html>

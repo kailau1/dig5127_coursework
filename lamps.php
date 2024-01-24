@@ -27,5 +27,6 @@
                 ?>
         </div>  
     </div>
+    <?php include "./assets/components/footer.php"; ?>
 </body>
 </html>

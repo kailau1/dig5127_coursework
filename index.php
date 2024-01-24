@@ -22,5 +22,6 @@
             include "./assets/components/index_body.php"
         ?>
     </div> 
+    <?php include "./assets/components/footer.php"; ?>
 </body>
 </html>
