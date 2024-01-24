@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `22226104`
 --
-CREATE DATABASE IF NOT EXISTS `22226104` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `22226104`;
+CREATE DATABASE IF NOT EXISTS `22226104_22180993` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `22226104_22180993`;
 
 -- --------------------------------------------------------
 
