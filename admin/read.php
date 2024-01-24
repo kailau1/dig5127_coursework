@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Read Products</title>
 </head>
+
 <body>
     <?php 
         include "../assets/components/admin_header.php";
@@ -19,7 +21,17 @@
             exit;
         }
     ?>
-    <?php
+
+    <div class='container'>
+        <div class='page-header'>
+            <h1>View Products or Categories</h1>
+        </div>
+        <select id='viewType' class='form-control mb-3' onchange='toggleView()'>
+            <option value='product'>Product</option>
+            <option value='category'>Category</option>
+        </select>
+        <div id='productView' style='display:block'>
+            <?php
         $sql = "SELECT p.id, p.name, p.description, p.price, GROUP_CONCAT(m.path SEPARATOR ', ') AS media_paths
             FROM cs_product p
             LEFT JOIN cs_product_media pm ON p.id = pm.product_id
@@ -29,18 +41,19 @@
         $result = $con->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<div class='table-responsive'><table class='table table-bordered'>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Media Paths</th>
-                            <th>Attributes</th>
-                        </tr>
-                    </thead>
-                    <tbody>";
+            echo "  <div class='table-responsive'><table class='table table-bordered'>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Media Paths</th>
+                                <th>Attributes</th>
+                            </tr>
+                        </thead>
+                        <tbody>"
+                                ;
             while($row = $result->fetch_assoc()) {
                 $media_sql = "SELECT m.path
                               FROM media m
@@ -81,22 +94,65 @@
                 </td>
               </tr>";
             }
-            echo "</tbody></table></div>";        
+            echo "</tbody></table></div><";        
         } else {
             echo "0 results";
         }
         
         ?>
-        
+        </div>
+        <div id='categoryView' style='display:none;'>
+        <?php
+    $category_sql = "SELECT id, name, description FROM cs_category";
+    $category_result = $con->query($category_sql);
+
+    if ($category_result->num_rows > 0) {
+        echo "<div class='table-responsive'><table class='table table-bordered'>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>";
+        while($category_row = $category_result->fetch_assoc()) {
+            echo "<tr>
+                    <td>".$category_row["id"]."</td>
+                    <td>".$category_row["name"]."</td>
+                    <td>".$category_row["description"]."</td>
+                  </tr>";
+        }
+        echo "</tbody></table></div>";
+    } else {
+        echo "0 results in category";
+    }
+?>
+
+        </div>
         <script>
-        function toggleDropdown(button) {
-            var dropdownContent = button.nextElementSibling;
-            if (dropdownContent.style.display === 'none') {
-                dropdownContent.style.display = 'block';
+            function toggleDropdown(button) {
+                var dropdownContent = button.nextElementSibling;
+                if (dropdownContent.style.display === 'none') {
+                    dropdownContent.style.display = 'block';
+                } else {
+                    dropdownContent.style.display = 'none';
+                }
+            }
+
+            function toggleView() {
+            var viewType = document.getElementById('viewType').value;
+            var productView = document.getElementById('productView');
+            var categoryView = document.getElementById('categoryView');
+            if (viewType === 'product') {
+                productView.style.display = 'block';
+                categoryView.style.display = 'none';
             } else {
-                dropdownContent.style.display = 'none';
+                productView.style.display = 'none';
+                categoryView.style.display = 'block';
             }
         }
         </script>
 </body>
+
 </html>

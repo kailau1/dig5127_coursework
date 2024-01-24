@@ -29,9 +29,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
                 <?php include "./functions/fetch_chair_cards.php"; ?>
-            </div>
         </div>
     </div>
 </body>

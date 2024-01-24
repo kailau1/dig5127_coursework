@@ -9,7 +9,6 @@
  
 <nav class="navbar navbar-expand-lg" id="navbar" style="margin-top: 1%;">
   <div class="container-fluid">
-    <!-- Logo as a link to the home page -->
     <a class="navbar-brand" href="./">
         <img src="./assets/images/logo.png" height="36px" alt="LIKEA logo" />
     </a>
@@ -27,7 +26,7 @@
                 Products
             </a>
             <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="./sofas.php">Couches</a>
+                <a class="dropdown-item" href="./sofas.php">Sofas</a>
                 <a class="dropdown-item" href="./desks.php">Desks</a>
                 <a class="dropdown-item" href="./chairs.php">Chairs</a>
                 <a class="dropdown-item" href="./lamps.php">Lamps</a>

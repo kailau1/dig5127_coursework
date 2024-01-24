@@ -24,12 +24,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
                 <?php include "./functions/fetch_desk_cards.php"
                 ?>
-            </div>
         </div>  
     </div>
 </body>
-</html>
 </html>
